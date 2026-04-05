@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar pedido</title>
+</head>
+<body>
+
+    <main>
+        <h1>Revisar Pedido</h1>
+        <p>Nome: {{ nome }}</p>
+        <p>Tamanho: {{ tamanho }}</p>
+        <p>Massa: {{ massa }}</p>
+        <p>Recheio: {{ recheio }}</p>
+        <p>Valor: R$ {{ valor }}</p>     
+    </main>
+
+    <section>
+        <h3>Deseja confirmar seu pedido?</h3>
+        <form method="POST" action="/confirmar">
+            <input type="hidden" name="nome" value="{{ nome }}">
+            <input type="hidden" name="tamanho" value="{{ tamanho }}">
+            <input type="hidden" name="massa" value="{{ massa }}">
+            <input type="hidden" name="recheio" value="{{ recheio }}">
+            <input type="hidden" name="valor" value="{{ valor }}">
+            <button type="submit">Confirmar Pedido</button>
+        </form>
+    </section>
+
+    <section>
+        <a href="/">Voltar ao cardápio</a>
+    </section>
+</body>
+</html>

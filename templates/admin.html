@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<body>
+    <header>
+        <h1>Painel de pedidos</h1>
+    </header>
+    <main>
+        {% for pedido in pedidos %}
+            <div>
+                <p>ID do pedido: {{ pedido[1] }}</p>
+                <p>Tamanho: {{ pedido[2] }}</p>
+                <p>Massa: {{ pedido[3] }}</p>               
+                <p>Recheio: {{ pedido[4] }}</p>
+                <p>Valor: R$ {{ pedido[5] }}</p>
+            </div>
+        {% endfor %}    
+    </main>
+</body>
+</html>

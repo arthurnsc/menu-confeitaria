@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Cardápio de Bolos</h1>
+        <h3>Personalize seu bolo de acordo com suas preferências</h3>
+    </header>
+    <main>
+
+        <section>
+            <div>
+                <h4>Tamanhos</h4>
+                <ul>
+                    <li>Pequeno</li>
+                    <li>Médio</li>
+                    <li>Grande</li>
+                </ul>
+            </div>
+
+            <div>
+            <h4>Massas</h4>
+                <ul>
+                    <li>Branca</li>
+                    <li>Chocolate</li>
+                    <li>Baunilha</li>
+                    <li>Cenoura</li>
+                    <li>Frutas Vermelhas</li>
+                    <li>Coco</li>
+                </ul>          
+            </div>
+
+            <div>
+                <h4>Recheios</h4>
+                <ul>
+                    <li>Brigadeiro</li>
+                    <li>Chocolate Branco</li>
+                    <li>Chocolate Amargo</li>
+                    <li>Doce de Leite</li>
+                    <li>Creme de Morango</li>
+                    <li>Creme de Limão</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Faça seu pedido</h3>
+            <form method="POST" action="/pedido">
+
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" maxlength="60" required>
+
+                <label for="tamanho">Tamanho</label>
+                <select name="tamanho">
+                    <option value="Pequeno">Pequeno</option>
+                    <option value="Medio">Médio</option>
+                    <option value="Grande">Grande</option>
+                </select>
+
+                <label for="select">Massa</label>
+                <select name="massa">
+                    <option value="Branca">Branca</option>
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Baunilha">Baunilha</option>
+                    <option value="Cenoura">Cenoura</option>
+                    <option value="Frutas vermelhas">Frutas Vermelhas</option>
+                    <option value="Coco">Coco</option>
+                </select>
+
+                <label for="recheio">Recheio</label>
+                <select name="recheio">
+                    <option value="Brigadeiro">Brigadeiro</option>
+                    <option value="Chocolate branco">Chocolate Branco</option>
+                    <option value="Chocolate amargo">Chocolate Amargo</option>
+                    <option value="Doce de leite">Doce de Leite</option>
+                    <option value="Creme de morango">Creme de Morango</option>
+                    <option value="Creme de limao">Creme de Limão</option>
+                </select>
+                <input type="submit" value="Enviar pedido">
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>
