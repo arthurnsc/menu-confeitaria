@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admpage.css') }}">
     <title>Document</title>
 <body>
     <header>
@@ -11,7 +12,8 @@
     <main>
         {% for pedido in pedidos %}
             <div>
-                <p>ID do pedido: {{ pedido[1] }}</p>
+                <p>ID do pedido: {{ pedido[0] }}</p>
+                <p>Nome do cliente: {{ pedido[1] }}</p>
                 <p>Tamanho: {{ pedido[2] }}</p>
                 <p>Massa: {{ pedido[3] }}</p>               
                 <p>Recheio: {{ pedido[4] }}</p>
@@ -19,5 +21,8 @@
             </div>
         {% endfor %}    
     </main>
+    <section>
+            <a href="/">Voltar ao cardápio</a>
+    </section>
 </body>
 </html>

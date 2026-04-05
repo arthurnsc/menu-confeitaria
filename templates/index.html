@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Cardápio</title>
 </head>
 <body>
 
     <header>
-        <h1>Cardápio de Bolos</h1>
+        <h1>Menu de Bolos</h1>
         <h3>Personalize seu bolo de acordo com suas preferências</h3>
     </header>
     <main>
 
-        <section>
+        <section id="cardapio">
             <div>
                 <h4>Tamanhos</h4>
                 <ul>
-                    <li>Pequeno</li>
-                    <li>Médio</li>
-                    <li>Grande</li>
+                    <li>Pequeno  --  R$ 50,00</li>
+                    <li>Médio  ------  R$ 70,00</li>
+                    <li>Grande  ---- R$ 90,00</li>
                 </ul>
             </div>
 
@@ -48,8 +49,8 @@
             </div>
         </section>
 
-        <section>
-            <h3>Faça seu pedido</h3>
+        <section id="pedido">
+            <h3 id="hpedido">Faça seu pedido</h3>
             <form method="POST" action="/pedido">
 
                 <label for="nome">Nome completo</label>
