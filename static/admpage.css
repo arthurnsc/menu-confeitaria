@@ -3,21 +3,30 @@ body {
     background: #FFF8F0; 
     color: #5C3A21; 
 }
-h1{ 
+h1, h3{ 
     text-align: center;
     color: #E754A6; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 header{
     padding: 20px;
+    margin-bottom: 20px;
 }
 div {
     background: #ffffff;
-    padding: 15px;
+    width: 300px;
+    min-height: 200px;
+    padding: 10px;
+    margin: 15px;
     border-radius: 10px;
-    margin: 10px;
-    width: 15%;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.192);
+}
+.titulo{
+    width: 100%;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    margin-bottom: -90px;
 }
 main{
     display: flex;
@@ -25,13 +34,57 @@ main{
     flex-wrap: wrap;
 }
 section{
+    width: 100%;
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 60px;
 }
 a{
     color: black;
     margin-top: 20px;
 }
+form{
+    float: right;
+    padding: 3px;
+}
+.bloco {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+#botaodeletar {
+    border: solid rgba(255, 30, 0, 0.493); 
+    background:rgba(173, 28, 28, 0.192);
+}
+#botaodeletar:hover {
+    background:rgba(255, 0, 0, 0.699)
+}
+
+#botaoconcluir {
+    border: solid rgba(9, 122, 9, 0.534); 
+    background:rgba(0, 128, 0, 0.144);
+}
+#botaoconcluir:hover {
+    background: green;
+}
+
+#botaoeditar {
+    border: solid rgba(245, 245, 19, 0.514); 
+    background:rgba(255, 255, 0, 0.253);
+}
+#botaoeditar:hover {
+    background:rgba(235, 231, 6, 0.795);
+}
+
 @media (max-width: 768px) {
     main{
         flex-direction: column;

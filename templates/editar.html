@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='editar.css') }}">
+    <title>Editar Pedido</title>
+</head>
+<body>
+    <header>
+        <h1>Editar Pedido</h1>
+    </header>
+    <main>
+        <section>
+            <h3>Informações do Pedido</h3>
+        </section>
+        <section>
+            <form action="/confirmaralteracoes/{{ pedido[0] }}" method="POST">
+
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" maxlength="60" required value="{{ pedido[1] }}">
+
+                <label for="tamanho">Tamanho</label>
+                <select name="tamanho">
+                    <option value="Pequeno" {% if pedido[2] == "Pequeno" %} selected {% endif %}>Pequeno</option>
+                    <option value="Medio" {% if pedido[2] == "Medio" %} selected {% endif %}>Médio</option>
+                    <option value="Grande" {% if pedido[2] == "Grande" %} selected {% endif %}>Grande</option>
+                </select>
+
+                <label for="select">Massa</label>
+                <select name="massa">
+                    <option value="Branca" {% if pedido[3] == "Branca" %} selected {% endif %}>Branca</option>
+                    <option value="Chocolate" {% if pedido[3] == "Chocolate" %} selected {% endif %}>Chocolate</option>
+                    <option value="Baunilha" {% if pedido[3] == "Baunilha" %} selected {% endif %}>Baunilha</option>
+                    <option value="Cenoura" {% if pedido[3] == "Cenoura" %} selected {% endif %}>Cenoura</option>
+                    <option value="Frutas vermelhas" {% if pedido[3] == "Frutas vermelhas" %} selected {% endif %}>Frutas Vermelhas</option>
+                    <option value="Coco" {% if pedido[3] == "Coco" %} selected {% endif %}>Coco</option>
+                </select>
+
+                <label for="recheio">Recheio</label>
+                <select name="recheio">
+                    <option value="Brigadeiro" {% if pedido[4] == "Brigadeiro" %} selected {% endif %}>Brigadeiro</option>
+                    <option value="Chocolate branco" {% if pedido[4] == "Chocolate branco" %} selected {% endif %}>Chocolate Branco</option>
+                    <option value="Chocolate amargo" {% if pedido[4] == "Chocolate amargo" %} selected {% endif %}>Chocolate Amargo</option>
+                    <option value="Doce de leite" {% if pedido[4] == "Doce de leite" %} selected {% endif %}>Doce de Leite</option>
+                    <option value="Creme de morango" {% if pedido[4] == "Creme de morango" %} selected {% endif %}>Creme de Morango</option>
+                    <option value="Creme de limao" {% if pedido[4] == "Creme de limao" %} selected {% endif %}>Creme de Limão</option>
+                </select>            
+                <button type="submit">Confirmar Alterações</button>
+            </form>
+        </section>
+        <section>
+            <a href="http://127.0.0.1:5000/admin">Voltar ao painel</a>
+        </section>
+    </main>
+</body>
+</html>
