@@ -34,7 +34,7 @@ def admpage():
     cursor.execute("SELECT * FROM pedidos WHERE status = 'concluido'")
     pedidosconcluidos = cursor.fetchall()
     conexao.close()
-    return render_template('admin.html', pedidosproducao=pedidosproducao, pedidosconcluidos=pedidosconcluidos)
+    return render_template('admin.html', pedidosproducao=pedidosproducao, pedidosconcluidos=pedidosconcluidos, num_pedidosproducao=len(pedidosproducao), num_pedidosconcluidos=len(pedidosconcluidos))
 
 @app.route('/concluirpedido/<int:pedido_id>', methods=['POST'])
 def concluirpedido(pedido_id):

@@ -22,6 +22,7 @@ Esta é uma aplicação web, que cria um cardápio digital de bolos e um painel 
     - Edição de pedidos
     - Exclusão de pedidos
 
+- Acesso rápido ao painel e cardápio
 - Armazenamento de pedidos em um banco de dados
 - Banco de dados com criação automática
 - Interface responsiva
@@ -32,7 +33,4 @@ Esta é uma aplicação web, que cria um cardápio digital de bolos e um painel 
 - Instale o Flask
 - Rode o servidor
 
-- Acesse no navegador:
-Cliente - http://127.0.0.1:5000/
-Administrador - http://127.0.0.1:5000/admin
 
