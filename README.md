@@ -11,12 +11,20 @@ Esta é uma aplicação web, que cria um cardápio digital de bolos e um painel 
 - CSS
 
 ## Funcionalidades
+- Para clientes:
+    - Personalização de pedidos
+    - Revisão do pedido antes do envio
+    - Confirmação do pedido.
+    
+- Para administradores:
+    - Visualização dos pedidos
+    - Confirmação de pedidos
+    - Edição de pedidos
+    - Exclusão de pedidos
 
-- Personalização, revisão e confirmação de pedidos.
-- Painel para visualizar os pedidos.
 - Armazenamento de pedidos em um banco de dados
-- Banco de dados criado automaticamente.
-- Layout responsivo.
+- Banco de dados com criação automática
+- Interface responsiva
 
 ## Como usar
 
