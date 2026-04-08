@@ -29,8 +29,5 @@ Esta é uma aplicação web, que cria um cardápio digital de bolos e um painel 
 
 ## Como usar
 
-- Clone o repositório
-- Instale o Flask
-- Rode o servidor
-
+[clique aqui](https://menu-confeitaria-1.onrender.com) para acessar o projeto.
 
